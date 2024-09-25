@@ -1,0 +1,30 @@
+{
+   "background": {
+      "scripts": [ "scripts/background.js" ]
+   },
+   "browser_action": {
+   },
+   "content_scripts": [ {
+      "all_frames": false,
+      "css": [ "css/raiseHand.css" ],
+      "js": [ "jQuery/jquery.min.js", "scripts/contentscript.js" ],
+      "matches": [ "http://*/*", "file://*/*", "https://*/*" ],
+      "run_at": "document_start"
+   } ],
+   "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+   "default_locale": "en",
+   "description": "__MSG_appDescription__",
+   "icons": {
+      "128": "images/128x128.png",
+      "16": "images/16x16.png",
+      "48": "images/48x48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAlLWkdGDTHiCk63GMZyGECjK3f1nUzwn+opcaVgihG6M22nDGTI/KGT8QY3wJeIHuQ0XUizbfP0eeupMfMkWDeaPq9yAcSQGxAZ+t/JwzJhIMbPWrBHiaWiJlfqP9jW1qqmdyTdQPmXTt2b5mPSqzihWdD6SpmIzlp9kDOqLkKGDmTsW6RBsvrQt5rIT7TQQSFeflQWvXGab2dDkwksBR9G6KpB75v/F05DtdlHSx+5ymijpBUZbpqRM2i1Jzn29fZF8abAN8IK05aiAbtBzod73a5LO3CqfaRy7OfpwXkjOukWkZfWgUQZWs2NG+c2jAPj2I5V92CycND6pFp1RyrQIDAQAB",
+   "manifest_version": 2,
+   "name": "Blocksi Enterprise Edition",
+   "permissions": [ "idle", "tabs", "http://*/*", "https://*/*", "webRequest", "webRequestBlocking", "\u003Call_urls>", "webNavigation", "identity", "identity.email", "geolocation", "storage", "activeTab", "enterprise.deviceAttributes", "notifications", "desktopCapture", "management", "history" ],
+   "short_name": "__MSG_appShortName__",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "3.4.4",
+   "web_accessible_resources": [ "pages/blockPage.html", "images/raise-hand.png", "images/raise-hand.svg", "images/chatBubble.svg", "images/yt-denied.png", "images/yt-shorts-block.png", "models/*" ]
+}
